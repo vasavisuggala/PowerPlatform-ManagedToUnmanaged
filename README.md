@@ -30,6 +30,13 @@ This PowerShell script provides a programmatic way to update governance settings
 ✅ Apply **Unmanaged ➡ Managed** to enable strict governance when needed  
 ✅ Verify governance configuration post-update  
 
+Here are the supported protectionLevel values:
+| **Value** | **Meaning**                                                                                  | **UI Equivalent**              |
+| --------- | -------------------------------------------------------------------------------------------- | ------------------------------ |
+| `Basic`   | ✅ No governance. Anyone can use any connectors (including premium). Default for *Unmanaged*.| **Unmanaged Environment**     |
+| `Managed` | 🔒 Full governance. Policies enforced, premium connectors restricted to licensed users.      | **Managed Environment**        |
+| `Strict`  | 🔥 Even tighter control (used for highly sensitive data and financial workloads).            | **Strict Managed Environment** |
+
 This utility leverages the **Microsoft.PowerApps.Administration.PowerShell** module for seamless integration with Power Platform.  
 
 ---
